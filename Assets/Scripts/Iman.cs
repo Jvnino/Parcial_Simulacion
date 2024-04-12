@@ -84,8 +84,7 @@ public class Iman : MonoBehaviour
     public void AplicarFuerza(Vector3 fuerza, float gravedad)
     {
         // Aplica fuerza solo si no estás arrastrando el imán
-        if (!isDragging)
-        {
+        
             // Aplica fuerza
             transform.position += (fuerza + Vector3.down * gravedad) * Time.deltaTime;
 
@@ -94,7 +93,7 @@ public class Iman : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, transform.localScale.y / 2, transform.position.z); // Ajusta la posición Y del imán para que la esfera quede completamente sobre el plano
             }
-        }
+       
     }
 
     //FUNCIONAMIENTO ARRASTRE
